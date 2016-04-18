@@ -1,12 +1,29 @@
 package com.farseer.pattern.hamburg;
 
+import com.farseer.pattern.factory.AbstractFactory;
+import com.farseer.pattern.material.MaterialBacon;
+import com.farseer.pattern.material.MaterialVegetarian;
+import com.farseer.pattern.material.MaterialWheat;
+
 /**
  * Created by zhaosc on 16/4/12.
  * 汉堡
  */
-public class Hamburg {
+public abstract class Hamburg {
 
     private String name;
+    protected MaterialBacon bacon;
+    protected MaterialWheat wheat;
+    protected MaterialVegetarian vegetarian;
+
+    protected AbstractFactory factory;
+
+
+    /**
+     * 准备原料
+     */
+    public abstract void prepare();
+
 
     public String getName() {
         return name;
@@ -16,9 +33,6 @@ public class Hamburg {
         this.name = name;
     }
 
-    public void prepare() {
-        System.out.println(String.format("准备[%s]...", name));
-    }
 
     /**
      *

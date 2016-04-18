@@ -1,9 +1,10 @@
 package com.farseer.pattern.store;
 
+import com.farseer.pattern.factory.AbstractFactory;
+import com.farseer.pattern.factory.McDonalFactory;
 import com.farseer.pattern.hamburg.Hamburg;
-import com.farseer.pattern.hamburg.McDonalBaconHamburg;
-import com.farseer.pattern.hamburg.McDonalWheatHamburg;
-import com.farseer.pattern.hamburg.McdonalVegetarianHamburg;
+import com.farseer.pattern.hamburg.McDonalHamburgA;
+import com.farseer.pattern.hamburg.McDonalHamburgB;
 
 /**
  * Created by zhaosc on 16/4/17.
@@ -12,13 +13,13 @@ import com.farseer.pattern.hamburg.McdonalVegetarianHamburg;
 public class McDonaldStore extends HamburgStore {
     @Override
     public Hamburg createHamburg(String type) {
+
+        AbstractFactory factory = new McDonalFactory();
         Hamburg hamburg = null;
-        if ("bacon".equals(type)) {
-            hamburg = new McDonalBaconHamburg();
-        } else if ("vegetarian".equals(type)) {
-            hamburg = new McdonalVegetarianHamburg();
-        } else if ("wheat".equals(type)) {
-            hamburg = new McDonalWheatHamburg();
+        if ("A".equals(type)) {
+            hamburg = new McDonalHamburgA(factory);
+        } else if ("B".equals(type)) {
+            hamburg = new McDonalHamburgB(factory);
         }
         return hamburg;
     }
