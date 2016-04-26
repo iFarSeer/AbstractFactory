@@ -1,6 +1,11 @@
 package com.farseer.pattern.factory;
 
-import com.farseer.pattern.material.*;
+import com.farseer.pattern.material.KFCBacon;
+import com.farseer.pattern.material.KFCVegetarian;
+import com.farseer.pattern.material.KFCWheat;
+import com.farseer.pattern.material.MaterialBacon;
+import com.farseer.pattern.material.MaterialVegetarian;
+import com.farseer.pattern.material.MaterialWheat;
 
 /**
  * Created by zhaosc on 16/4/18.
