@@ -1,7 +1,6 @@
 package com.farseer.pattern;
 
 import com.farseer.pattern.store.HamburgStore;
-import com.farseer.pattern.store.KFCStore;
 import com.farseer.pattern.store.McDonaldStore;
 
 public class Main {

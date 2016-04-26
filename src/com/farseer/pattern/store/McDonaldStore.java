@@ -1,7 +1,7 @@
 package com.farseer.pattern.store;
 
 import com.farseer.pattern.factory.AbstractFactory;
-import com.farseer.pattern.factory.McDonalFactory;
+import com.farseer.pattern.factory.McDonalMaterialFactory;
 import com.farseer.pattern.hamburg.Hamburg;
 import com.farseer.pattern.hamburg.McDonalHamburgA;
 import com.farseer.pattern.hamburg.McDonalHamburgB;
@@ -14,7 +14,7 @@ public class McDonaldStore extends HamburgStore {
     @Override
     public Hamburg createHamburg(String type) {
 
-        AbstractFactory factory = new McDonalFactory();
+        AbstractFactory factory = new McDonalMaterialFactory();
         Hamburg hamburg = null;
         if ("A".equals(type)) {
             hamburg = new McDonalHamburgA(factory);
